@@ -1,0 +1,39 @@
+Given a string containing alphanumeric characters, calculate the sum of all numbers present in the string.
+
+Input Format
+
+Read a string
+
+Constraints
+
+string
+
+Output Format
+
+Print Sum of digits in a string
+
+Sample Input 0
+
+1abc23
+Sample Output 0
+
+6
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+  Scanner s=new Scanner(System.in);
+        int sum=0;
+        String a=s.nextLine();
+        char b[]=a.toCharArray();
+        for(int i=0;i<b.length;i++)
+        {
+            if(Character.isDigit(b[i]))
+                sum=sum+b[i]-48;
+        }
+        System.out.println(sum);
+    }
+}
